@@ -26,4 +26,21 @@ ALTER TABLE students
 ADD CONSTRAINT pk_students
 PRIMARY KEY (student_id);
 
+ALTER TABLE trainers ADD(
+car_reg VARCHAR(8));
+
+ALTER TABLE trainers
+ADD CONSTRAINT u_trainers
+UNIQUE (car_reg);
+
+
+/* this drops(REMOVES) the date of birth column in the table students
+ALTER TABLE students DROP
+(date_of_birth);
+*/
+/* adds the column back in
+ALTER TABLE students ADD(
+date_of_birth DATE);
+*/
+-- how to view constraints
 SELECT constraint_name FROM user_constraints;
