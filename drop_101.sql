@@ -1,6 +1,18 @@
+-- removes Foreign key
+ALTER TABLE courses
+DROP CONSTRAINT fk_courses;
 
+-- removes primary key
+ALTER TABLE course_runs
+DROP CONSTRAINT pk_course_runs;
 
+-- removes primary key
+ALTER TABLE attendance
+DROP CONSTRAINT pk_attendance;
 
+-- removes primary key
+ALTER TABLE courses
+DROP CONSTRAINT pk_courses;
 
 -- removes primary key
 ALTER TABLE sites
@@ -28,6 +40,15 @@ ALTER TABLE trainers
 DROP CONSTRAINT pk_trainers;
 
 -- removes table
+DROP TABLE courses;
+
+-- removes table
+DROP TABLE course_runs;
+
+-- removes table
+DROP TABLE attendance;
+
+-- removes table
 DROP TABLE sites;
 
 -- removes table
@@ -38,10 +59,6 @@ DROP TABLE students;
 
 -- removes table
 DROP TABLE trainers;
-
-
-
-
 
 
 PURGE RECYCLEBIN;

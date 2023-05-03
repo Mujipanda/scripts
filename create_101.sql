@@ -10,7 +10,7 @@ location VARCHAR(30));
 
 --Create Table
 CREATE TABLE subject_areas(
-subject_id NUMBER(4),
+subject_id NUMBER(3),
 subject_name VARCHAR(15),
 description VARCHAR(50));
 
@@ -41,4 +41,19 @@ course_title VARCHAR(15),
 subject_id NUMBER(3),
 duration NUMBER(4),
 cost NUMBER(4));
+
+
+--Create Table
+CREATE TABLE course_runs(
+running_id NUMBER(3),
+site_id NUMBER(3),
+course_id NUMBER(3),
+trainer_id NUMBER(3),
+start_date DATE);
+
+--Create Table
+CREATE TABLE attendance(
+running_id NUMBER(3),
+student_id NUMBER(5),
+amount_paid NUMBER(5));
 
