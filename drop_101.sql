@@ -39,6 +39,9 @@ DROP CONSTRAINT u_trainers;
 ALTER TABLE trainers
 DROP CONSTRAINT pk_trainers;
 
+--removes table
+DROP TABLE companies;
+
 -- removes table
 DROP TABLE courses;
 

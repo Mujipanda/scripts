@@ -1,3 +1,7 @@
+--Create SEQUENCE for companies
+CREATE SEQUENCE seq_invoice
+INCREMENT BY 1
+START WITH 1000;
 
 
 ALTER TABLE sites MODIFY(
@@ -6,6 +10,11 @@ location VARCHAR(40));
 -- Modify 
 ALTER TABLE trainers MODIFY(
 contact_no NOT NULL);
+
+--Primary key
+ALTER TABLE companies
+ADD CONSTRAINT pk_companies
+PRIMARY KEY (company_id);
 
 -- Primary key
 ALTER TABLE sites 

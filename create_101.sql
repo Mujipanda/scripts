@@ -1,5 +1,12 @@
 --CSY1065_101@student/22804566
 
+--Create Table 
+CREATE TABLE companies(
+company_id NUMBER(5),
+company_name VARCHAR(25),
+town VARCHAR(20),
+contact_no VARCHAR(18),
+no_of_emp NUMBER(5));
 
 --Create Table
 CREATE TABLE sites(
@@ -56,4 +63,22 @@ CREATE TABLE attendance(
 running_id NUMBER(3),
 student_id NUMBER(5),
 amount_paid NUMBER(5));
+
+
+--Create SEQUENCE for companies
+CREATE SEQUENCE seq_invoice
+INCREMENT BY 1
+START WITH 1000;
+
+--Create SEQUENCE 
+CREATE SEQUENCE seq_trainers
+INCREMENT BY 1
+START WITH 101;
+
+--Create SEQUENCE
+CREATE SEQUENCE seq_sites
+INCREMENT 1
+START WITH 1;
+
+SELECT * FROM user_sequences;
 
